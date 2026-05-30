@@ -144,30 +144,31 @@ const seedDB = () => {
 
   const supportBot = {
     id: "bot-support-1",
-    name: "SaaSify Support Bot",
-    description: "Multi-purpose support agent handling plan queries, basic configurations, and feature info.",
+    name: "FreshDrop Organic Coffee Support Bot",
+    description: "Warm and knowledgeable customer service chatbot for FreshDrop organic coffee subscription boxes.",
     createdBy: "admin-1",
-    systemInstruction: "You are the primary support chatbot for SaaSify, a visual automation builder. Speak politely, provide short and structured instructions, and highlight platform stability. Answer inquiries strictly using the FAQs and uploaded Documents whenever relevant. Keep tone professional yet helpful.",
+    systemInstruction: "You are the primary support chatbot for FreshDrop Coffee Co., a premium organic coffee subscription service delivering freshly-roasted beans weekly or monthly. Ensure customers feel welcomed with a warm and highly aromatic coffee-house vibe. Speak politely, provide clear, concise and nicely formatted instructions. Answer inquiries strictly using the FAQs and uploaded documents whenever possible. Keep your tone cheerful, helpful, sensory (mentioning rich flavor, freshly-roasted aroma, or sustainable organic sourcing), and strictly focused on FreshDrop's operations. If asking about unrelated topics, politely redirect back to coffee-related help.",
     type: "support",
     faqs: [
-      { id: "faq-1", question: "What are your pricing plans?", answer: "SaaSify offers three plans: Base ($29/mo) for single website bots, Pro ($99/mo) for up to 5 bots with document searches, and Enterprise ($249/mo) with full white-label and active CRM integration." },
-      { id: "faq-2", question: "How do I embed the chatbot widget on my website?", answer: "Go to your Admin Panel, select the chatbot, click 'Widget Integration', copy the script tag, and paste it right before the closing </body> tag of your website HTML." },
-      { id: "faq-3", question: "Does the chatbot support multilingual answers?", answer: "Yes! Our engine automatically detects modern languages (Spanish, French, German, Hindi, Japanese, etc.) and answers in the customer's native tongue fluently." }
+      { id: "faq-1", question: "What is the FreshDrop pricing model?", answer: "We offer three curated subscription plans: Fresh Starter ($19/mo) for 1 dynamic single-origin bag (12oz) shipped monthly, Roaster's Choice ($35/mo) for 2 high-grade bags with full grind control shipped semi-monthly, and Office Perk ($95/mo) for 6 bags featuring dynamic roasting options and prioritized shipping." },
+      { id: "faq-2", question: "How do I change my grind size?", answer: "Log into your FreshDrop portal, navigate to 'My Subscription', select your active bag, and select from Whole Bean, Coarse (French Press), Medium (Drip), or Fine (Espresso). Changes must be saved by Sunday midnight before Tuesday's weekly roast!" },
+      { id: "faq-3", question: "What are your shipping and roasting schedules?", answer: "To ensure ultimate peak freshness, we roast all our certified organic single-origin beans every Monday, pack them in degas-valve packaging, and ship on Tuesday via 2-3 day tracked express delivery." },
+      { id: "faq-4", question: "Are your coffee beans sustainably sourced?", answer: "Absolutely! 100% of our coffee beans are strictly certified Organic and Fair Trade, sourced directly from smallholder farming cooperatives in Ethiopia, Colombia, Sumatra, and Honduras at above-market rates." }
     ],
     documents: [
       {
         id: "doc-manual",
-        fileName: "saasify_product_spec.txt",
-        fileContent: "SaaSify Chatbot Widget Specification:\n- Supports inline microphone voice inputs.\n- Uses LocalStorage for chat session tracking to avoid cookie warnings.\n- Features real-time sentiment analysis where negative sentiment alerts real HR/support admins.\n- Built with Tailwind CSS and React 19.",
+        fileName: "freshdrop_subscription_charter.txt",
+        fileContent: "FreshDrop Customer Service Charter:\n- Freshness Promise: If your coffee is roasted more than 24 hours prior to shipping, or is delayed, contact us for a free replacement bag.\n- Eco-Friendly: Packaging is 100% compostable, including the zipper and outgassing valve.\n- Warm Support Promise: Our support chatbot can automatically process standard pauses, address changes, and grind modifications. Any negative sentiment alerts our roasting leads for immediate manual intervention!\n- Certified organic practices across Latin America and African supplier farms.",
         uploadedBy: "admin-1",
         createdAt: new Date().toISOString()
       }
     ],
     theme: {
-      primaryColor: "indigo",
-      welcomeMessage: "Hello! Welcome to SaaSify customer center. How can I assist you with our visual SaaS automation tools today?",
+      primaryColor: "emerald",
+      welcomeMessage: "Greetings from the roastery! ☕ I'm the FreshDrop Assistant. Would you like to check our shipping times, modify a grind size preference, or explore our premium organic subscriptions today?",
       isDark: false,
-      botName: "SaaSify Assistant"
+      botName: "FreshDrop Assistant"
     },
     createdAt: new Date().toISOString()
   };
@@ -206,19 +207,19 @@ const seedDB = () => {
     {
       id: "conv-support-1",
       chatbotId: "bot-support-1",
-      chatbotName: "SaaSify Assistant",
+      chatbotName: "FreshDrop Assistant",
       chatbotType: "support",
       userEmail: "customer1@gmail.com",
       userName: "Alex Rivera",
       messages: [
-        { id: "m1", sender: "user", text: "What plans do you have?", timestamp: new Date(Date.now() - 3600000 * 3).toISOString() },
-        { id: "m2", sender: "bot", text: "SaaSify offers premium packages: Base ($29/mo) for 1 bot, Pro ($99/mo) for 5 bots, and Enterprise ($249/mo) with full integrations. Would you like help choosing one?", timestamp: new Date(Date.now() - 3600000 * 2.9).toISOString(), sentiment: "neutral" },
-        { id: "m3", sender: "user", text: "That sounds excellent, thank you! Let me check the Pro tier.", timestamp: new Date(Date.now() - 3600000 * 2.8).toISOString() },
-        { id: "m4", sender: "bot", text: "Wonderful! The Pro tier includes intelligent search inside your uploaded PDF folders, advanced sentiment logs, and multilingual matching. You can sign up via our dashboard anytime.", timestamp: new Date(Date.now() - 3600000 * 2.75).toISOString(), sentiment: "positive" }
+        { id: "m1", sender: "user", text: "What coffee plans do you have?", timestamp: new Date(Date.now() - 3600000 * 3).toISOString() },
+        { id: "m2", sender: "bot", text: "FreshDrop offers three exceptional curated organic schedules: Fresh Starter ($19/mo) for 1 single-origin bag monthly, Roaster's Choice ($35/mo) for 2 high-grade bags with full grind flexibility, and Office Perk ($95/mo) for 6 bags. Would you like help choosing a flavor roast profile?", timestamp: new Date(Date.now() - 3600000 * 2.9).toISOString(), sentiment: "neutral" },
+        { id: "m3", sender: "user", text: "That sounds aromatic and perfect! Let me check the Roaster's Choice tier.", timestamp: new Date(Date.now() - 3600000 * 2.8).toISOString() },
+        { id: "m4", sender: "bot", text: "Subversive choice! The Roaster's Choice subscription ensures 2 custom roasted organic batches shipped every two weeks. You can also customize your grind settings (e.g. French Press or Espresso) online.", timestamp: new Date(Date.now() - 3600000 * 2.75).toISOString(), sentiment: "positive" }
       ],
       status: "completed",
       rating: 5,
-      feedbackText: "Super fast answers, got exactly what I needed regarding pricing!",
+      feedbackText: "Super warm customer service, answered all my grind and roasting questions beautifully!",
       sentimentAverage: "positive",
       createdAt: new Date(Date.now() - 3600000 * 3).toISOString(),
       updatedAt: new Date(Date.now() - 3600000 * 2.7).toISOString()
@@ -285,38 +286,38 @@ const syncToMongo = async () => {
   try {
     // 1. Sync Users
     for (const u of db.users) {
-      await UserModel.findOneAndUpdate({ id: u.id }, u, { upsert: true, new: true });
+      await UserModel.findOneAndUpdate({ id: u.id } as any, u, { upsert: true, new: true });
     }
     const userIds = db.users.map(u => u.id);
-    await UserModel.deleteMany({ id: { $nin: userIds } });
+    await UserModel.deleteMany({ id: { $nin: userIds } } as any);
 
     // 2. Sync Chatbots
     for (const b of db.chatbots) {
-      await ChatbotModel.findOneAndUpdate({ id: b.id }, b, { upsert: true, new: true });
+      await ChatbotModel.findOneAndUpdate({ id: b.id } as any, b, { upsert: true, new: true });
     }
     const chatbotIds = db.chatbots.map(b => b.id);
-    await ChatbotModel.deleteMany({ id: { $nin: chatbotIds } });
+    await ChatbotModel.deleteMany({ id: { $nin: chatbotIds } } as any);
 
     // 3. Sync Conversations
     for (const c of db.conversations) {
-      await ConversationModel.findOneAndUpdate({ id: c.id }, c, { upsert: true, new: true });
+      await ConversationModel.findOneAndUpdate({ id: c.id } as any, c, { upsert: true, new: true });
     }
     const convIds = db.conversations.map(c => c.id);
-    await ConversationModel.deleteMany({ id: { $nin: convIds } });
+    await ConversationModel.deleteMany({ id: { $nin: convIds } } as any);
 
     // 4. Sync Documents
     for (const d of db.documents) {
-      await DocumentModel.findOneAndUpdate({ id: d.id }, d, { upsert: true, new: true });
+      await DocumentModel.findOneAndUpdate({ id: d.id } as any, d, { upsert: true, new: true });
     }
     const docIds = db.documents.map(d => d.id);
-    await DocumentModel.deleteMany({ id: { $nin: docIds } });
+    await DocumentModel.deleteMany({ id: { $nin: docIds } } as any);
 
     // 5. Sync InterviewReports
     for (const r of db.interviewReports) {
-      await InterviewReportModel.findOneAndUpdate({ id: r.id }, r, { upsert: true, new: true });
+      await InterviewReportModel.findOneAndUpdate({ id: r.id } as any, r, { upsert: true, new: true });
     }
     const reportIds = db.interviewReports.map(r => r.id);
-    await InterviewReportModel.deleteMany({ id: { $nin: reportIds } });
+    await InterviewReportModel.deleteMany({ id: { $nin: reportIds } } as any);
 
     console.log("MongoDB collections state synchronized successfully.");
   } catch (err) {
@@ -339,6 +340,61 @@ const saveDB = () => {
   }
 };
 
+const migrateToCoffeeService = () => {
+  try {
+    const existingSupportBot = db.chatbots.find(b => b.id === "bot-support-1");
+    if (!existingSupportBot || existingSupportBot.name === "SaaSify Support Bot") {
+      console.log("Database state has old SaaSify bot. Upgrading to FreshDrop Organic Coffee Co...");
+      
+      const freshDropBot = {
+        id: "bot-support-1",
+        name: "FreshDrop Organic Coffee Support Bot",
+        description: "Warm and knowledgeable customer service chatbot for FreshDrop organic coffee subscription boxes.",
+        createdBy: "admin-1",
+        systemInstruction: "You are the primary support chatbot for FreshDrop Coffee Co., a premium organic coffee subscription service delivering freshly-roasted beans weekly or monthly. Ensure customers feel welcomed with a warm and highly aromatic coffee-house vibe. Speak politely, provide clear, concise and nicely formatted instructions. Answer inquiries strictly using the FAQs and uploaded documents whenever possible. Keep your tone cheerful, helpful, sensory (mentioning rich flavor, freshly-roasted aroma, or sustainable organic sourcing), and strictly focused on FreshDrop's operations. If asking about unrelated topics, politely redirect back to coffee-related help.",
+        type: "support",
+        faqs: [
+          { id: "faq-1", question: "What is the FreshDrop pricing model?", answer: "We offer three curated subscription plans: Fresh Starter ($19/mo) for 1 dynamic single-origin bag (12oz) shipped monthly, Roaster's Choice ($35/mo) for 2 high-grade bags with full grind control shipped semi-monthly, and Office Perk ($95/mo) for 6 bags featuring dynamic roasting options and prioritized shipping." },
+          { id: "faq-2", question: "How do I change my grind size?", answer: "Log into your FreshDrop portal, navigate to 'My Subscription', select your active bag, and select from Whole Bean, Coarse (French Press), Medium (Drip), or Fine (Espresso). Changes must be saved by Sunday midnight before Tuesday's weekly roast!" },
+          { id: "faq-3", question: "What are your shipping and roasting schedules?", answer: "To ensure ultimate peak freshness, we roast all our certified organic single-origin beans every Monday, pack them in degas-valve packaging, and ship on Tuesday via 2-3 day tracked express delivery." },
+          { id: "faq-4", question: "Are your coffee beans sustainably sourced?", answer: "Absolutely! 100% of our coffee beans are strictly certified Organic and Fair Trade, sourced directly from smallholder farming cooperatives in Ethiopia, Colombia, Sumatra, and Honduras at above-market rates." }
+        ],
+        documents: [
+          {
+            id: "doc-manual",
+            fileName: "freshdrop_subscription_charter.txt",
+            fileContent: "FreshDrop Customer Service Charter:\n- Freshness Promise: If your coffee is roasted more than 24 hours prior to shipping, or is delayed, contact us for a free replacement bag.\n- Eco-Friendly: Packaging is 100% compostable, including the zipper and outgassing valve.\n- Warm Support Promise: Our support chatbot can automatically process standard pauses, address changes, and grind modifications. Any negative sentiment alerts our roasting leads for immediate manual intervention!\n- Certified organic practices across Latin America and African supplier farms.",
+            uploadedBy: "admin-1",
+            createdAt: new Date().toISOString()
+          }
+        ],
+        theme: {
+          primaryColor: "emerald",
+          welcomeMessage: "Greetings from the roastery! ☕ I'm the FreshDrop Assistant. Would you like to check our shipping times, modify a grind size preference, or explore our premium organic subscriptions today?",
+          isDark: false,
+          botName: "FreshDrop Assistant"
+        },
+        createdAt: existingSupportBot ? existingSupportBot.createdAt : new Date().toISOString()
+      };
+
+      if (existingSupportBot) {
+        db.chatbots = db.chatbots.map(b => b.id === "bot-support-1" ? freshDropBot : b);
+      } else {
+        db.chatbots.push(freshDropBot);
+      }
+
+      // Sync custom documents list
+      db.documents = db.documents.filter(d => d.id !== "doc-manual");
+      db.documents.push(freshDropBot.documents[0]);
+
+      saveDB();
+      console.log("Database state successfully migrated to FreshDrop Organic Coffee!");
+    }
+  } catch (error) {
+    console.error("Migration error in migrateToCoffeeService:", error);
+  }
+};
+
 const initializeDatabase = async () => {
   const mongoUri = process.env.MONGODB_URI;
   if (mongoUri) {
@@ -350,11 +406,11 @@ const initializeDatabase = async () => {
       isMongoConnected = true;
       console.log("MongoDB connected successfully!");
 
-      const mongoUsers = await UserModel.find({});
-      const mongoBots = await ChatbotModel.find({});
-      const mongoConvs = await ConversationModel.find({});
-      const mongoDocs = await DocumentModel.find({});
-      const mongoReports = await InterviewReportModel.find({});
+      const mongoUsers = await UserModel.find({} as any);
+      const mongoBots = await ChatbotModel.find({} as any);
+      const mongoConvs = await ConversationModel.find({} as any);
+      const mongoDocs = await DocumentModel.find({} as any);
+      const mongoReports = await InterviewReportModel.find({} as any);
 
       // If database contains data, load it into memory
       if (mongoUsers.length > 0 || mongoBots.length > 0) {
@@ -364,6 +420,7 @@ const initializeDatabase = async () => {
         db.documents = mongoDocs.map(d => d.toObject());
         db.interviewReports = mongoReports.map(r => r.toObject());
         console.log("Loaded system state from MongoDB server successfully.");
+        migrateToCoffeeService();
       } else {
         console.log("MongoDB is connected but empty. Pre-populating seed records...");
         seedDB();
@@ -383,6 +440,7 @@ const initializeDatabase = async () => {
       const data = fs.readFileSync(DB_FILE, "utf-8");
       db = JSON.parse(data);
       console.log("Local filesystem database parsed successfully.");
+      migrateToCoffeeService();
     } else {
       console.log("Local filesystem database not found, seeding...");
       seedDB();
@@ -1013,12 +1071,7 @@ async function startServer() {
 
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
-      server: {
-        middlewareMode: true,
-        watch: {
-          ignored: ["**/data-store.json", "**/*.log"]
-        }
-      },
+      server: { middlewareMode: true },
       appType: "spa",
     });
     app.use(vite.middlewares);

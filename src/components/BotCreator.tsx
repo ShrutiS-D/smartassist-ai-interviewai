@@ -186,7 +186,9 @@ export default function BotCreator({ token, onCreated, editingBot, onCancelEdit 
               <div>
                 <label className="block text-xs font-sans font-semibold text-slate-700 mb-1 flex items-center">
                   System Instruction Override
-                  <HelpCircle className="w-3 h-3 text-slate-400 ml-1 cursor-help" title="Guides raw tone and behavior constraints of the Gemini model" />
+                  <span title="Guides raw tone and behavior constraints of the Gemini model">
+                    <HelpCircle className="w-3 h-3 text-slate-400 ml-1 cursor-help" />
+                  </span>
                 </label>
                 <textarea
                   rows={4}

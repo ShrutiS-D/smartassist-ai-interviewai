@@ -1,6 +1,6 @@
 {
   "name": "SmartAssist AI & InterviewAI",
-  "description": "Multi-agent chatbot creator for websites and automated InterviewAI platform for HR screening, candidate evaluation, and resume analysis.",
+  "description": "Dedicated Live Customer Support Barista portal for FreshDrop Organic Coffee Co., powered by conversational AI and sustainable coffee-house dialogue.",
   "requestFramePermissions": ["microphone"],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

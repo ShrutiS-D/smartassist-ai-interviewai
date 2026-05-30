@@ -1,0 +1,447 @@
+{
+  "users": [
+    {
+      "_id": "6a1ac7304feac59b59a561d8",
+      "id": "admin-1",
+      "__v": 0,
+      "createdAt": "2026-05-30T11:17:04.015Z",
+      "email": "hr@company.com",
+      "name": "Jane HR Manager",
+      "password": "password123",
+      "role": "admin"
+    }
+  ],
+  "chatbots": [
+    {
+      "id": "bot-support-1",
+      "name": "FreshDrop Organic Coffee Support Bot",
+      "description": "Warm and knowledgeable customer service chatbot for FreshDrop organic coffee subscription boxes.",
+      "createdBy": "admin-1",
+      "systemInstruction": "You are the primary support chatbot for FreshDrop Coffee Co., a premium organic coffee subscription service delivering freshly-roasted beans weekly or monthly. Ensure customers feel welcomed with a warm and highly aromatic coffee-house vibe. Speak politely, provide clear, concise and nicely formatted instructions. Answer inquiries strictly using the FAQs and uploaded documents whenever possible. Keep your tone cheerful, helpful, sensory (mentioning rich flavor, freshly-roasted aroma, or sustainable organic sourcing), and strictly focused on FreshDrop's operations. If asking about unrelated topics, politely redirect back to coffee-related help.",
+      "type": "support",
+      "faqs": [
+        {
+          "id": "faq-1",
+          "question": "What is the FreshDrop pricing model?",
+          "answer": "We offer three curated subscription plans: Fresh Starter ($19/mo) for 1 dynamic single-origin bag (12oz) shipped monthly, Roaster's Choice ($35/mo) for 2 high-grade bags with full grind control shipped semi-monthly, and Office Perk ($95/mo) for 6 bags featuring dynamic roasting options and prioritized shipping."
+        },
+        {
+          "id": "faq-2",
+          "question": "How do I change my grind size?",
+          "answer": "Log into your FreshDrop portal, navigate to 'My Subscription', select your active bag, and select from Whole Bean, Coarse (French Press), Medium (Drip), or Fine (Espresso). Changes must be saved by Sunday midnight before Tuesday's weekly roast!"
+        },
+        {
+          "id": "faq-3",
+          "question": "What are your shipping and roasting schedules?",
+          "answer": "To ensure ultimate peak freshness, we roast all our certified organic single-origin beans every Monday, pack them in degas-valve packaging, and ship on Tuesday via 2-3 day tracked express delivery."
+        },
+        {
+          "id": "faq-4",
+          "question": "Are your coffee beans sustainably sourced?",
+          "answer": "Absolutely! 100% of our coffee beans are strictly certified Organic and Fair Trade, sourced directly from smallholder farming cooperatives in Ethiopia, Colombia, Sumatra, and Honduras at above-market rates."
+        }
+      ],
+      "documents": [
+        {
+          "id": "doc-manual",
+          "fileName": "freshdrop_subscription_charter.txt",
+          "fileContent": "FreshDrop Customer Service Charter:\n- Freshness Promise: If your coffee is roasted more than 24 hours prior to shipping, or is delayed, contact us for a free replacement bag.\n- Eco-Friendly: Packaging is 100% compostable, including the zipper and outgassing valve.\n- Warm Support Promise: Our support chatbot can automatically process standard pauses, address changes, and grind modifications. Any negative sentiment alerts our roasting leads for immediate manual intervention!\n- Certified organic practices across Latin America and African supplier farms.",
+          "uploadedBy": "admin-1",
+          "createdAt": "2026-05-30T14:34:55.873Z"
+        }
+      ],
+      "theme": {
+        "primaryColor": "emerald",
+        "welcomeMessage": "Greetings from the roastery! ☕ I'm the FreshDrop Assistant. Would you like to check our shipping times, modify a grind size preference, or explore our premium organic subscriptions today?",
+        "isDark": false,
+        "botName": "FreshDrop Assistant"
+      },
+      "createdAt": "2026-05-30T11:17:04.017Z"
+    },
+    {
+      "_id": "6a1ac7304feac59b59a561da",
+      "id": "bot-interview-1",
+      "__v": 0,
+      "createdAt": "2026-05-30T11:17:04.017Z",
+      "createdBy": "admin-1",
+      "description": "Recruitment screening agent built to evaluate Senior React candidates.",
+      "documents": [
+        {
+          "id": "doc-sarah-resume",
+          "fileName": "sarah_chen_resume.txt",
+          "fileContent": "Sarah Chen\nEmail: sarah.chen@gmail.com\nExperience:\n- 4 years at Stripe as a Front-End Technical Lead. Revamped payment onboarding dashboards using React, Zustand, and Tailwind.\n- 2 years as Full Stack Engineer at Vercel optimizing NextJS bundle sizes and streaming pipelines.\nSkills: React, Next.js, Node.js, TypeScript, PostgreSQL, AWS, Performance Tuning.",
+          "uploadedBy": "admin-1",
+          "createdAt": "2026-05-30T11:17:04.017Z",
+          "analysis": "Strengths: High-scale Stripe / Vercel tenure. Perfect stack matching (React, TS, Node). Experience with state orchestration. Core areas to double-check: complex SQL schemas, remote sync management."
+        }
+      ],
+      "faqs": [],
+      "jobRequirements": "Experience with React, TypeScript, Node.js backend pipelines, cloud services, and custom system architectures. Strong system design skill and standard state management expertise.",
+      "jobTitle": "Senior Full-Stack Developer",
+      "name": "TalentScout InterviewAI",
+      "systemInstruction": "You are TalentScout, an elite executive recruiter. Your goal is to conduct a crisp, conversational 4-5 question interview screening based on the candidate's uploaded resume and custom job expectations. Focus on React 18/19, state managers, hydration concepts, and leadership. Ask exactly one questions at a time. Frame inquiries precisely but invite conversational, descriptive answers.",
+      "theme": {
+        "primaryColor": "emerald",
+        "welcomeMessage": "Welcome! I have thoroughly reviewed your resume for the Senior Full-Stack Developer role. When you are ready, say 'Hi' or 'Let's begin' to start our screening chat.",
+        "isDark": true,
+        "botName": "InterviewAI Recruiter"
+      },
+      "type": "interview"
+    }
+  ],
+  "conversations": [
+    {
+      "_id": "6a1ac7304feac59b59a561db",
+      "id": "conv-support-1",
+      "__v": 0,
+      "chatbotId": "bot-support-1",
+      "chatbotName": "SaaSify Assistant",
+      "chatbotType": "support",
+      "createdAt": "2026-05-30T08:17:04.017Z",
+      "feedbackText": "Super fast answers, got exactly what I needed regarding pricing!",
+      "messages": [
+        {
+          "id": "m1",
+          "sender": "user",
+          "text": "What plans do you have?",
+          "timestamp": "2026-05-30T08:17:04.017Z"
+        },
+        {
+          "id": "m2",
+          "sender": "bot",
+          "text": "SaaSify offers premium packages: Base ($29/mo) for 1 bot, Pro ($99/mo) for 5 bots, and Enterprise ($249/mo) with full integrations. Would you like help choosing one?",
+          "timestamp": "2026-05-30T08:23:04.017Z",
+          "sentiment": "neutral"
+        },
+        {
+          "id": "m3",
+          "sender": "user",
+          "text": "That sounds excellent, thank you! Let me check the Pro tier.",
+          "timestamp": "2026-05-30T08:29:04.017Z"
+        },
+        {
+          "id": "m4",
+          "sender": "bot",
+          "text": "Wonderful! The Pro tier includes intelligent search inside your uploaded PDF folders, advanced sentiment logs, and multilingual matching. You can sign up via our dashboard anytime.",
+          "timestamp": "2026-05-30T08:32:04.017Z",
+          "sentiment": "positive"
+        }
+      ],
+      "rating": 5,
+      "sentimentAverage": "positive",
+      "skillsAssessed": [],
+      "status": "completed",
+      "updatedAt": "2026-05-30T08:35:04.017Z",
+      "userEmail": "customer1@gmail.com",
+      "userName": "Alex Rivera"
+    },
+    {
+      "_id": "6a1ac7304feac59b59a561dc",
+      "id": "conv-interview-1",
+      "__v": 0,
+      "candidateScore": 92,
+      "chatbotId": "bot-interview-1",
+      "chatbotName": "InterviewAI Recruiter",
+      "chatbotType": "interview",
+      "createdAt": "2026-05-30T06:17:04.018Z",
+      "interviewReport": {
+        "id": "rep-1",
+        "sessionId": "conv-interview-1",
+        "candidateName": "Sarah Chen",
+        "candidateEmail": "sarah.chen@gmail.com",
+        "jobTitle": "Senior Full-Stack Developer",
+        "overallScore": 92,
+        "categories": {
+          "technicalSkills": 95,
+          "communication": 90,
+          "experienceFit": 94,
+          "problemSolving": 89
+        },
+        "keyStrengths": [
+          "Superb React rendering optimization skills (Zustand selectors, hydration management).",
+          "Tier-1 industry pedigree (Stripe and Vercel full-stack pipelines).",
+          "Clear explanation of bundle size optimization with solid numbers (40% CPU recovery)."
+        ],
+        "improvementAreas": [
+          "Candidate spoke mostly about front-end orchestration; sql schemas were untouched.",
+          "Could highlight remote real-time syncing architectures."
+        ],
+        "transcriptSummary": "Sarah answered advanced frontend architecture questions with absolute authority. Highly technical, structured, and focused.",
+        "hiringDecision": "Hire",
+        "createdAt": "2026-05-30T06:47:04.018Z"
+      },
+      "messages": [
+        {
+          "id": "mi1",
+          "sender": "user",
+          "text": "Let's begin please.",
+          "timestamp": "2026-05-30T06:17:04.018Z"
+        },
+        {
+          "id": "mi2",
+          "sender": "bot",
+          "text": "Hello Sarah! Let us start. Out of your Stripe experience, what was the most complex state management issue you resolved on the payment checkout revamp, and how did you approach it?",
+          "timestamp": "2026-05-30T06:23:04.018Z"
+        },
+        {
+          "id": "mi3",
+          "sender": "user",
+          "text": "We dealt with high-frequency telemetry syncing across multiple dynamic modals. Redux was causing major render lags, so we migrated to Zustand with selective subscriptions, saving 40% CPU overhead.",
+          "timestamp": "2026-05-30T06:29:04.018Z"
+        },
+        {
+          "id": "mi4",
+          "sender": "bot",
+          "text": "Zustand selectors are amazing for rendering optimization! Moving on, with your Vercel NextHS experience, how did you handle React Server Components vs client-state limits?",
+          "timestamp": "2026-05-30T06:32:04.018Z"
+        },
+        {
+          "id": "mi5",
+          "sender": "user",
+          "text": "We strictly isolated network-intensive models onto RSCs and hydrated tiny client-side islands only for highly interactive inputs. This dramatically lowered our first-contentful paint.",
+          "timestamp": "2026-05-30T06:35:04.018Z"
+        }
+      ],
+      "skillsAssessed": [
+        "React",
+        "Zustand State",
+        "Next.js",
+        "Hydration Scaling",
+        "CPU Profiles"
+      ],
+      "status": "completed",
+      "updatedAt": "2026-05-30T06:47:04.018Z",
+      "userEmail": "sarah.chen@gmail.com",
+      "userName": "Sarah Chen"
+    },
+    {
+      "_id": "6a1ac7af4feac59b59a561e0",
+      "id": "conv-oa8hnd4",
+      "__v": 0,
+      "chatbotId": "bot-support-1",
+      "chatbotName": "SaaSify Support Bot",
+      "chatbotType": "support",
+      "createdAt": "2026-05-30T11:19:11.760Z",
+      "messages": [
+        {
+          "id": "wel-1",
+          "sender": "bot",
+          "text": "Hello! Welcome to SaaSify customer center. How can I assist you with our visual SaaS automation tools today?",
+          "timestamp": "2026-05-30T11:19:11.760Z"
+        }
+      ],
+      "skillsAssessed": [],
+      "status": "active",
+      "updatedAt": "2026-05-30T11:19:11.760Z",
+      "userEmail": "suresh@gmil.com",
+      "userName": "suresh "
+    },
+    {
+      "_id": "6a1ac7c24feac59b59a561e1",
+      "id": "conv-epdo99r",
+      "__v": 0,
+      "chatbotId": "bot-support-1",
+      "chatbotName": "SaaSify Support Bot",
+      "chatbotType": "support",
+      "createdAt": "2026-05-30T11:19:30.157Z",
+      "messages": [
+        {
+          "id": "wel-1",
+          "sender": "bot",
+          "text": "Hello! Welcome to SaaSify customer center. How can I assist you with our visual SaaS automation tools today?",
+          "timestamp": "2026-05-30T11:19:30.157Z"
+        }
+      ],
+      "skillsAssessed": [],
+      "status": "active",
+      "updatedAt": "2026-05-30T11:19:30.157Z",
+      "userEmail": "suresh@gmail.com",
+      "userName": "sureh"
+    },
+    {
+      "_id": "6a1ac7d94feac59b59a561e2",
+      "id": "conv-9fpno8o",
+      "__v": 0,
+      "chatbotId": "bot-support-1",
+      "chatbotName": "SaaSify Support Bot",
+      "chatbotType": "support",
+      "createdAt": "2026-05-30T11:19:53.735Z",
+      "messages": [
+        {
+          "id": "wel-1",
+          "sender": "bot",
+          "text": "Hello! Welcome to SaaSify customer center. How can I assist you with our visual SaaS automation tools today?",
+          "timestamp": "2026-05-30T11:19:53.735Z"
+        }
+      ],
+      "skillsAssessed": [],
+      "status": "active",
+      "updatedAt": "2026-05-30T11:19:53.735Z",
+      "userEmail": "suresh@gmail.com",
+      "userName": "asdasd"
+    },
+    {
+      "_id": "6a1ac8384feac59b59a561e3",
+      "id": "conv-ic06hb0",
+      "__v": 0,
+      "chatbotId": "bot-support-1",
+      "chatbotName": "SaaSify Support Bot",
+      "chatbotType": "support",
+      "createdAt": "2026-05-30T11:21:27.856Z",
+      "messages": [
+        {
+          "id": "wel-1",
+          "sender": "bot",
+          "text": "Hello! Welcome to SaaSify customer center. How can I assist you with our visual SaaS automation tools today?",
+          "timestamp": "2026-05-30T11:21:27.856Z"
+        }
+      ],
+      "skillsAssessed": [],
+      "status": "active",
+      "updatedAt": "2026-05-30T11:21:27.856Z",
+      "userEmail": "syrsh@gmail.com",
+      "userName": "dsdf"
+    },
+    {
+      "_id": "6a1ac83f4feac59b59a561e4",
+      "id": "conv-t7rpev1",
+      "__v": 0,
+      "chatbotId": "bot-support-1",
+      "chatbotName": "SaaSify Support Bot",
+      "chatbotType": "support",
+      "createdAt": "2026-05-30T11:21:35.443Z",
+      "messages": [
+        {
+          "id": "wel-1",
+          "sender": "bot",
+          "text": "Hello! Welcome to SaaSify customer center. How can I assist you with our visual SaaS automation tools today?",
+          "timestamp": "2026-05-30T11:21:35.443Z"
+        }
+      ],
+      "skillsAssessed": [],
+      "status": "active",
+      "updatedAt": "2026-05-30T11:21:35.444Z",
+      "userEmail": "test@example.com",
+      "userName": "Test User"
+    },
+    {
+      "_id": "6a1ac8a64feac59b59a561e5",
+      "id": "conv-mrw1u0s",
+      "__v": 0,
+      "chatbotId": "bot-support-1",
+      "chatbotName": "SaaSify Support Bot",
+      "chatbotType": "support",
+      "createdAt": "2026-05-30T11:23:18.181Z",
+      "messages": [
+        {
+          "id": "wel-1",
+          "sender": "bot",
+          "text": "Hello! Welcome to SaaSify customer center. How can I assist you with our visual SaaS automation tools today?",
+          "timestamp": "2026-05-30T11:23:18.181Z"
+        }
+      ],
+      "skillsAssessed": [],
+      "status": "active",
+      "updatedAt": "2026-05-30T11:23:18.181Z",
+      "userEmail": "retry@example.com",
+      "userName": "Retry User"
+    },
+    {
+      "_id": "6a1aca334feac59b59a561e6",
+      "id": "conv-975swea",
+      "__v": 0,
+      "chatbotId": "bot-support-1",
+      "chatbotName": "SaaSify Support Bot",
+      "chatbotType": "support",
+      "createdAt": "2026-05-30T11:29:55.201Z",
+      "messages": [
+        {
+          "id": "wel-1",
+          "sender": "bot",
+          "text": "Hello! Welcome to SaaSify customer center. How can I assist you with our visual SaaS automation tools today?",
+          "timestamp": "2026-05-30T11:29:55.201Z"
+        },
+        {
+          "id": "msg-kon3cql",
+          "sender": "user",
+          "text": "hello",
+          "timestamp": "2026-05-30T11:29:58.831Z"
+        },
+        {
+          "id": "msg-sk6vcsv",
+          "sender": "bot",
+          "text": "I'm having trouble processing your query directly. Can I assist with our core service options?",
+          "timestamp": "2026-05-30T11:30:00.254Z",
+          "sentiment": "neutral"
+        },
+        {
+          "id": "msg-626cejz",
+          "sender": "user",
+          "text": "yes please , how are you",
+          "timestamp": "2026-05-30T11:30:15.470Z"
+        },
+        {
+          "id": "msg-y9ico6f",
+          "sender": "bot",
+          "text": "I'm having trouble processing your query directly. Can I assist with our core service options?",
+          "timestamp": "2026-05-30T11:30:15.705Z",
+          "sentiment": "neutral"
+        }
+      ],
+      "skillsAssessed": [],
+      "status": "active",
+      "updatedAt": "2026-05-30T11:30:15.470Z",
+      "userEmail": "suresh@gmail.com",
+      "userName": "suresh"
+    }
+  ],
+  "documents": [
+    {
+      "_id": "6a1ac7304feac59b59a561de",
+      "id": "doc-sarah-resume",
+      "__v": 0,
+      "analysis": "Strengths: High-scale Stripe / Vercel tenure. Perfect stack matching (React, TS, Node). Experience with state orchestration. Core areas to double-check: complex SQL schemas, remote sync management.",
+      "createdAt": "2026-05-30T11:17:04.017Z",
+      "fileContent": "Sarah Chen\nEmail: sarah.chen@gmail.com\nExperience:\n- 4 years at Stripe as a Front-End Technical Lead. Revamped payment onboarding dashboards using React, Zustand, and Tailwind.\n- 2 years as Full Stack Engineer at Vercel optimizing NextJS bundle sizes and streaming pipelines.\nSkills: React, Next.js, Node.js, TypeScript, PostgreSQL, AWS, Performance Tuning.",
+      "fileName": "sarah_chen_resume.txt",
+      "uploadedBy": "admin-1"
+    },
+    {
+      "id": "doc-manual",
+      "fileName": "freshdrop_subscription_charter.txt",
+      "fileContent": "FreshDrop Customer Service Charter:\n- Freshness Promise: If your coffee is roasted more than 24 hours prior to shipping, or is delayed, contact us for a free replacement bag.\n- Eco-Friendly: Packaging is 100% compostable, including the zipper and outgassing valve.\n- Warm Support Promise: Our support chatbot can automatically process standard pauses, address changes, and grind modifications. Any negative sentiment alerts our roasting leads for immediate manual intervention!\n- Certified organic practices across Latin America and African supplier farms.",
+      "uploadedBy": "admin-1",
+      "createdAt": "2026-05-30T14:34:55.873Z"
+    }
+  ],
+  "interviewReports": [
+    {
+      "_id": "6a1ac7304feac59b59a561df",
+      "id": "rep-1",
+      "__v": 0,
+      "candidateEmail": "sarah.chen@gmail.com",
+      "candidateName": "Sarah Chen",
+      "categories": {
+        "technicalSkills": 95,
+        "communication": 90,
+        "experienceFit": 94,
+        "problemSolving": 89
+      },
+      "createdAt": "2026-05-30T06:47:04.018Z",
+      "hiringDecision": "Hire",
+      "improvementAreas": [
+        "Candidate spoke mostly about front-end orchestration; sql schemas were untouched.",
+        "Could highlight remote real-time syncing architectures."
+      ],
+      "jobTitle": "Senior Full-Stack Developer",
+      "keyStrengths": [
+        "Superb React rendering optimization skills (Zustand selectors, hydration management).",
+        "Tier-1 industry pedigree (Stripe and Vercel full-stack pipelines).",
+        "Clear explanation of bundle size optimization with solid numbers (40% CPU recovery)."
+      ],
+      "overallScore": 92,
+      "sessionId": "conv-interview-1",
+      "transcriptSummary": "Sarah answered advanced frontend architecture questions with absolute authority. Highly technical, structured, and focused."
+    }
+  ]
+}
