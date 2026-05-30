@@ -1,0 +1,6 @@
+{
+  "name": "SmartAssist AI & InterviewAI",
+  "description": "Multi-agent chatbot creator for websites and automated InterviewAI platform for HR screening, candidate evaluation, and resume analysis.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
